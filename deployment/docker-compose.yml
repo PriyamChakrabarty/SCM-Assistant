@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+
+  scm-api:
+
+    build:
+      context: ..
+
+    container_name: scm_assistant
+
+    ports:
+      - "8000:8000"
+
+    restart: always
+
+    env_file:
+      - ../.env

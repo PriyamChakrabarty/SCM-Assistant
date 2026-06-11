@@ -1,0 +1,16 @@
+pandas
+numpy
+python-dotenv
+chromadb
+langchain
+langchain-community
+langchain-google-genai
+langchain-openai
+pypdf
+sentence-transformers
+tqdm
+fastapi
+uvicorn
+jinja2
+requests
+pytest

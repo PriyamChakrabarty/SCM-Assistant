@@ -1,0 +1,24 @@
+.env
+**pycache**/
+*.pyc
+
+vector_db/
+generated/
+
+.vscode/
+.idea/
+
+.DS_Store
+
+*.log
+
+node_modules/
+
+flowise-api-keys.json
+cat > .gitignore << EOF
+venv/
+__pycache__/
+.env
+*.pyc
+chroma_db/
+EOF
