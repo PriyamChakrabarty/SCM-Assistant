@@ -14,7 +14,7 @@ def find_rebate_eligible_suppliers(csv_file: str) -> pd.DataFrame:
     df = pd.read_csv(csv_file)
 
     eligible = df[
-        (df["Supplier_Tier"] == "Tier-1")
+        (df["Contract_Tier"] == "Tier-1")
         & (df["OTD_Rate_Pct"] >= 93)
         & (df["Defect_Rate_Pct"] < 0.5)
         & (df["Sustainability_Score"] >= 85)

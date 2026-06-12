@@ -9,7 +9,7 @@ def active_disruption_suppliers(csv_file: str) -> pd.DataFrame:
     df = pd.read_csv(csv_file)
 
     disrupted = df[
-        df["Active_Disruption"].notna()
+        df["Active_Disruptions"].notna()
     ]
 
     return (
@@ -18,7 +18,7 @@ def active_disruption_suppliers(csv_file: str) -> pd.DataFrame:
                 "Supplier_ID",
                 "Supplier_Name",
                 "Risk_Level",
-                "Active_Disruption",
+                "Active_Disruptions",
             ]
         ]
         .drop_duplicates()

@@ -5,13 +5,13 @@ def calculate_regional_spend(csv_file: str) -> pd.DataFrame:
     df = pd.read_csv(csv_file)
 
     regional_spend = (
-        df.groupby("Region")["PO_Value"]
+        df.groupby("Region")["PO_Value_USD"]
         .sum()
         .reset_index()
     )
 
     regional_spend = regional_spend.sort_values(
-        by="PO_Value",
+        by="PO_Value_USD",
         ascending=False,
     )
 
