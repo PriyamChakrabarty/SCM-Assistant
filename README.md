@@ -1,97 +1,125 @@
-# SCM Assistant
+# SCM Assistant – Supply Chain RAG Chatbot
 
-Supply Chain Management Assistant built using Flowise.
+## Overview
 
-## Objective
+SCM Assistant is an AI-powered Supply Chain Management chatbot built using Flowise, Google Gemini 2.5 Flash, Pinecone Vector Database, and FastAPI.
 
-Build a RAG chatbot capable of answering questions about:
+The project combines Retrieval-Augmented Generation (RAG) with supply chain analytics APIs to answer questions about supplier performance, governance policies, compliance requirements, disruptions, spend analysis, and supplier risk.
 
-- Supplier Performance Data
-- Governance Policy
+## Features
+
+* RAG-based question answering using PDF and CSV data sources
+* Semantic search with Pinecone Vector Database
+* Google Gemini 2.5 Flash powered conversational AI
+* FastAPI analytics services
+* Supplier Watch List (SWL) analysis
+* Volume rebate eligibility analysis
+* Disruption and risk monitoring
+* Regional spend analysis
+* Product defect analytics
+* Public Flowise chatbot deployment
 
 ## Tech Stack
 
-- Flowise Cloud
-- Google Gemini 2.5 Flash
-- Chroma Vector Database
-- FastAPI Analytics Layer
-- Python
+### AI & RAG
 
----
+* Flowise
+* Google Gemini 2.5 Flash
+* Pinecone Vector Database
+* Mistral Embeddings
 
-## Architecture
+### Backend
 
-User
-↓
-Flowise Agent
-↓
-Retriever + Analytics Tools
-↓
-Gemini
-↓
-Response
+* FastAPI
+* Pandas
+* Python
 
----
+### Deployment
 
-## Chunk Experiment 1
+* Render
+* Flowise Cloud
 
-Chunk Size: 500
+## Project Architecture
 
-Chunk Overlap: 50
+User Query
+→ Flowise Agent
+→ Pinecone Retrieval
+→ Gemini 2.5 Flash
+→ FastAPI Analytics Tools
+→ Response
 
-Result:
+## API Endpoints
 
-- Faster retrieval
-- Less context
+### Health Check
 
----
+GET /
 
-## Chunk Experiment 2
+### Rebate Eligible Suppliers
 
-Chunk Size: 1200
+GET /rebate
 
-Chunk Overlap: 200
+### Supplier Watch List
 
-Result:
+GET /swl
 
-- Better policy retrieval
-- Better certification retrieval
+### Active Disruptions
 
-Chosen Configuration:
+GET /disruptions
 
-Chunk Size: 1200
+### Regional Spend Analysis
 
-Chunk Overlap: 200
+GET /regional-spend
 
----
+### Defect Analysis
 
-## Public Chatbot URL
+GET /defects
 
-https://cloud.flowiseai.com/chatbot/XXXXX
+## Deployment
 
----
+### Flowise Chatbot
 
-## LLM
+<ADD_FLOWISE_CHATBOT_URL>
 
-Gemini 2.5 Flash
+### Backend API
 
----
+https://scm-assistant.onrender.com/
 
-## Embeddings
+## Repository Structure
 
-Google Embeddings
+```text
+SCM-Assistant/
+│
+├── analytics/
+├── backend/
+├── data/
+├── screenshots/
+├── requirements.txt
+├── README.md
+└── scm_assistant.json
+```
 
----
+## Sample Questions
 
-## Sample Question Results
-
-(Add screenshots and answers here)
-
----
+* Which suppliers qualify for the annual Volume Rebate Program?
+* Which suppliers are on Supplier Watch List status?
+* Which suppliers have active disruption flags?
+* Which region has the highest procurement spend?
+* Which product category has the highest average defect rate?
 
 ## Future Improvements
 
-- SQL Agent
-- Real-time supplier updates
-- Dashboard
-- Multi-agent architecture
+* Real-time supplier monitoring
+* Dashboard integration
+* Advanced risk prediction models
+* Multi-agent workflow orchestration
+* Automated supplier scorecards
+
+## Author
+
+Priyam Chakrabarty
+
+GitHub:
+https://github.com/PriyamChakrabarty
+
+Project Repository:
+https://github.com/PriyamChakrabarty/SCM-Assistant
