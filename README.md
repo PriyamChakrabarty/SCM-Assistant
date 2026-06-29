@@ -78,7 +78,7 @@ GET /defects
 
 ### Flowise Chatbot
 
-<ADD_FLOWISE_CHATBOT_URL>
+https://cloud.flowiseai.com/chatbot/98e7dc64-4fd0-4a9f-860a-a8502110ad5b
 
 ### Backend API
 
